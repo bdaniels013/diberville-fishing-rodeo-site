@@ -6,39 +6,61 @@
     <title>D'Iberville Fishing Rodeo</title>
     <meta
       name="description"
-      content="Landing page structure for the D'Iberville Fishing Rodeo."
+      content="Official 2026 D'Iberville Fishing Rodeo forms, rules, sponsor materials, memorial artwork, and shirt previews."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="site-shell">
-      <header class="hero">
+      <header class="hero" id="top">
         <div class="hero__skyline" aria-hidden="true">
           <span class="bird bird--left"></span>
           <span class="bird bird--right"></span>
         </div>
 
         <div class="hero__frame">
-          <p class="eyebrow">Gulf Coast Event Website Draft</p>
-          <div class="hero__art">
-            <div class="hero__rails" aria-hidden="true"></div>
-            <div class="hero__badge">Logo</div>
-            <div class="hero__watermark">D'Iberville Fishing Rodeo</div>
-          </div>
-          <div class="hero__copy">
-            <div>
-              <p class="kicker">Hero / cover area</p>
-              <h1>D'Iberville Fishing Rodeo</h1>
+          <p class="eyebrow">Official 2026 Event Materials</p>
+
+          <div class="hero__layout">
+            <div class="hero__art">
+              <div class="hero__rails" aria-hidden="true"></div>
+              <img
+                class="hero__logo"
+                src="./logo/Diberville%20FISHING%20RODEO%20LOGO%20%20FINAL%20FINAL%20A%20png.png"
+                alt="2026 D'Iberville Fishing Rodeo logo"
+              />
+              <div class="hero__watermark">May 22-24, 2026</div>
             </div>
-            <p class="hero__lede">
-              This section is ready for the event headline, dates, short intro,
-              and primary actions like register, sponsor, or learn more.
-            </p>
-            <div class="hero__actions">
-              <a href="#registration" class="button button--primary"
-                >Primary CTA</a
-              >
-              <a href="#schedule" class="button button--ghost">View Schedule</a>
+
+            <div class="hero__copy">
+              <div>
+                <p class="kicker">City of D'Iberville</p>
+                <h1>D'Iberville Fishing Rodeo</h1>
+              </div>
+
+              <p class="hero__lede">
+                The new uploads are now organized into one home for rules,
+                registration, sponsorship material, memorial artwork, and shirt
+                previews so people can find the right file fast.
+              </p>
+
+              <div class="hero__stats" aria-label="Event highlights">
+                <span class="stat-pill">May 22-24, 2026</span>
+                <span class="stat-pill">D'Iberville Marina</span>
+                <span class="stat-pill">No entry fee, registration required</span>
+              </div>
+
+              <div class="hero__actions">
+                <a href="#registration" class="button button--primary">
+                  View Registration
+                </a>
+                <a href="#sponsorship" class="button button--primary">
+                  Sponsor Materials
+                </a>
+                <a href="#shirts" class="button button--ghost">
+                  Rodeo Shirts
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -48,18 +70,57 @@
         <section class="panel panel--warm" id="rules">
           <div class="panel__header">
             <p class="panel__label">Section 01</p>
-            <h2>Rules</h2>
+            <h2>Rules &amp; Guidelines</h2>
           </div>
+
           <p class="panel__text">
-            Space for tournament rules, divisions, eligibility, weigh-in details,
-            and download links.
+            The official rules flyer is front and center here so anglers can
+            review tournament requirements, weigh-in guidance, and preregistration
+            expectations before the weekend starts.
           </p>
-          <ul class="placeholder-list">
-            <li>Overview of tournament structure</li>
-            <li>Entry requirements and deadlines</li>
-            <li>Boat, catch, and safety policies</li>
-          </ul>
-          <a class="panel__link" href="#rules">Add rules content later</a>
+
+          <article class="document-card document-card--wide">
+            <a
+              class="document-preview"
+              href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20RULES%202K26%20final%201A.jpg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20RULES%202K26%20final%201A.jpg"
+                alt="2026 D'Iberville Fishing Rodeo official rules flyer"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="document-card__body">
+              <p class="document-card__eyebrow">Official document</p>
+              <h3>2026 Rodeo Rules</h3>
+              <p>
+                Keep the full flyer handy for species rules, scoring details,
+                and event-day expectations.
+              </p>
+
+              <div class="link-cluster">
+                <a
+                  class="button button--ghost"
+                  href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20RULES%202K26%20final%201A.jpg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Rules Flyer
+                </a>
+                <a
+                  class="button button--ghost"
+                  href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20announcment%20letter%202K26%20final%201A.jpg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Read Announcement
+                </a>
+              </div>
+            </div>
+          </article>
         </section>
 
         <section class="panel panel--cool" id="registration">
@@ -67,110 +128,601 @@
             <p class="panel__label">Section 02</p>
             <h2>Registration Form</h2>
           </div>
+
           <p class="panel__text">
-            Ready for the main contestant signup form, embedded intake form, or
-            a registration instructions block.
+            The entry form now has its own dedicated area with the main callout
+            from the artwork: there is no entry fee, but everyone still needs to
+            register and agree to the rules.
           </p>
-          <form class="placeholder-form">
-            <label>
-              Name
-              <input type="text" placeholder="Participant name" />
-            </label>
-            <label>
-              Email
-              <input type="email" placeholder="name@example.com" />
-            </label>
-            <label>
-              Category
-              <select>
-                <option>Choose division</option>
-              </select>
-            </label>
-            <button type="button" class="button button--primary">
-              Form Placeholder
-            </button>
-          </form>
+
+          <div class="registration-layout">
+            <article class="document-card">
+              <a
+                class="document-preview document-preview--landscape"
+                href="./photos/2026%20DIBERVILLE%20ENTRY%20FORM%20final%20SINGLE%20final%201A.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/2026%20DIBERVILLE%20ENTRY%20FORM%20final%20SINGLE%20final%201A.jpg"
+                  alt="2026 D'Iberville Fishing Rodeo registration form"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="document-card__body">
+                <p class="document-card__eyebrow">Participant form</p>
+                <h3>Tournament Registration</h3>
+                <ul class="detail-list">
+                  <li>No entry fee, but registration is required.</li>
+                  <li>Preregister online by Thursday, May 21, 2026.</li>
+                  <li>Review the official rules before signing up.</li>
+                </ul>
+
+                <div class="link-cluster">
+                  <a
+                    class="button button--ghost"
+                    href="./photos/2026%20DIBERVILLE%20ENTRY%20FORM%20final%20SINGLE%20final%201A.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Flyer Version
+                  </a>
+                  <a class="button button--ghost" href="#rules">
+                    Jump to Rules
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <form class="registration-form" id="registration-form">
+              <div class="registration-form__intro">
+                <p class="document-card__eyebrow">Online submission</p>
+                <h3>Submit Your Registration</h3>
+                <p>
+                  Fill this out, confirm you agree to the official rules, and
+                  submit it to the registration email.
+                </p>
+              </div>
+
+              <div class="registration-form__grid">
+                <label>
+                  Full name
+                  <input type="text" name="fullName" autocomplete="name" required />
+                </label>
+
+                <label>
+                  Age
+                  <input
+                    type="number"
+                    name="age"
+                    min="1"
+                    max="120"
+                    inputmode="numeric"
+                    required
+                  />
+                </label>
+
+                <label>
+                  Email address
+                  <input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                  />
+                </label>
+
+                <label>
+                  Phone number
+                  <input
+                    type="tel"
+                    name="phone"
+                    autocomplete="tel"
+                    required
+                  />
+                </label>
+
+                <label>
+                  Veteran status
+                  <select name="veteranStatus" required>
+                    <option value="">Select one</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                  </select>
+                </label>
+
+                <label>
+                  City and state
+                  <input
+                    type="text"
+                    name="location"
+                    autocomplete="address-level2"
+                    placeholder="D'Iberville, MS"
+                  />
+                </label>
+              </div>
+
+              <label class="registration-form__message">
+                Notes
+                <textarea
+                  name="notes"
+                  rows="4"
+                  placeholder="Anything you want the rodeo team to know before check-in."
+                ></textarea>
+              </label>
+
+              <label class="consent-check">
+                <input type="checkbox" name="agreeToRules" required />
+                <span>
+                  I agree to the official D'Iberville Fishing Rodeo rules and
+                  guidelines and want to submit this registration.
+                </span>
+              </label>
+
+              <div class="registration-form__actions">
+                <button type="submit" class="button button--primary">
+                  Agree and Submit
+                </button>
+                <p class="registration-form__note">
+                  This sends the form to <strong>marty@martywilson.com</strong>
+                  using the visitor's email app for now.
+                </p>
+              </div>
+
+              <p
+                class="registration-form__status"
+                id="registration-status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
         </section>
 
-        <section class="panel panel--cool" id="vendors">
+        <section class="panel panel--cool" id="sponsorship">
           <div class="panel__header">
             <p class="panel__label">Section 03</p>
-            <h2>Vendor Form</h2>
+            <h2>Sponsorship Kit</h2>
           </div>
+
           <p class="panel__text">
-            This block can hold vendor applications, booth information, setup
-            rules, and pricing once you send the final content.
+            Sponsorship pieces are grouped together so potential partners can see
+            the invitation letter and the fillable sponsor form in the same place.
           </p>
-          <div class="feature-tag-row">
-            <span>Booth details</span>
-            <span>Setup times</span>
-            <span>Vendor contact</span>
+
+          <div class="document-grid">
+            <article class="document-card">
+              <a
+                class="document-preview"
+                href="./photos/2026%20Diberville%20Fishing%20Rodeo%20Sponsorship%20FILL%20Form%20Final%201A.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/2026%20Diberville%20Fishing%20Rodeo%20Sponsorship%20FILL%20Form%20Final%201A.jpg"
+                  alt="2026 D'Iberville Fishing Rodeo sponsorship form"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="document-card__body">
+                <p class="document-card__eyebrow">Sponsor form</p>
+                <h3>Sponsorship Signup</h3>
+                <p>
+                  Direct sponsors to the form image for their business details and
+                  commitment information.
+                </p>
+                <div class="link-cluster">
+                  <a
+                    class="button button--ghost"
+                    href="./photos/2026%20Diberville%20Fishing%20Rodeo%20Sponsorship%20FILL%20Form%20Final%201A.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Sponsor Form
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="document-card">
+              <a
+                class="document-preview"
+                href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20SPONSORS%20COMMUNITY%20PARTNER%20letter%202K26%20final%201A.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20SPONSORS%20COMMUNITY%20PARTNER%20letter%202K26%20final%201A.jpg"
+                  alt="Community partner sponsorship letter for the 2026 D'Iberville Fishing Rodeo"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="document-card__body">
+                <p class="document-card__eyebrow">Community outreach</p>
+                <h3>Partner Invitation Letter</h3>
+                <p>
+                  This artwork-backed letter gives businesses the full community
+                  pitch and sponsorship context before they commit.
+                </p>
+                <div class="link-cluster">
+                  <a
+                    class="button button--ghost"
+                    href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20SPONSORS%20COMMUNITY%20PARTNER%20letter%202K26%20final%201A.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Letter
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
-          <a class="panel__link" href="#vendors">Reserve vendor content space</a>
         </section>
 
-        <section class="panel panel--sand" id="schedule">
+        <section class="panel panel--sand" id="highlights">
           <div class="panel__header">
             <p class="panel__label">Section 04</p>
-            <h2>Schedule of Events</h2>
+            <h2>Weekend Highlights</h2>
           </div>
+
           <p class="panel__text">
-            Designed for a timeline, ceremonies, weigh-ins, kids events, sponsor
-            moments, and any weekend schedule content.
+            Supporting artwork is set aside here for promotion, sharing, and quick
+            review.
           </p>
-          <div class="timeline">
-            <div class="timeline__item">
-              <strong>Morning</strong>
-              <span>Placeholder event slot</span>
-            </div>
-            <div class="timeline__item">
-              <strong>Midday</strong>
-              <span>Placeholder event slot</span>
-            </div>
-            <div class="timeline__item">
-              <strong>Evening</strong>
-              <span>Placeholder event slot</span>
-            </div>
+
+          <div class="feature-showcase">
+            <article class="feature-showcase__item">
+              <a
+                class="document-preview document-preview--feature"
+                href="./photos/dad%20MEMORIAL%20DIBERVILLE%20RODEO%20horz%2011x14%20final%201A.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dad%20MEMORIAL%20DIBERVILLE%20RODEO%20horz%2011x14%20final%201A.jpg"
+                  alt="Dick Wilson memorial catch and release award artwork"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="document-card__body">
+                <p class="document-card__eyebrow">Memorial feature</p>
+                <h3>Dick Wilson Memorial Award</h3>
+                <p>
+                  The memorial catch and release artwork gets its own feature spot
+                  so it does not get buried under the paperwork.
+                </p>
+                <div class="link-cluster">
+                  <a
+                    class="button button--ghost"
+                    href="./photos/dad%20MEMORIAL%20DIBERVILLE%20RODEO%20horz%2011x14%20final%201A.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Memorial Graphic
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-showcase__item">
+              <a
+                class="document-preview"
+                href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20announcment%20letter%202K26%20final%201A.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20announcment%20letter%202K26%20final%201A.jpg"
+                  alt="Mayor's announcement letter for the 2026 D'Iberville Fishing Rodeo"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="document-card__body">
+                <p class="document-card__eyebrow">Announcement</p>
+                <h3>Mayor's Letter</h3>
+                <p>
+                  The event announcement from the mayor is available as a clean
+                  full-size image for sharing and press use.
+                </p>
+                <div class="link-cluster">
+                  <a
+                    class="button button--ghost"
+                    href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20announcment%20letter%202K26%20final%201A.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Announcement
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
 
-        <section class="panel panel--sand" id="sponsors">
+        <section class="panel panel--sand" id="sponsor-levels">
           <div class="panel__header">
             <p class="panel__label">Section 05</p>
-            <h2>Sponsors</h2>
+            <h2>Sponsor Levels</h2>
           </div>
+
           <p class="panel__text">
-            Built for sponsor logos, supporter tiers, and business acknowledgments.
+            The two-page sponsor breakdown is now placed where businesses can
+            compare levels without hunting through folders.
           </p>
-          <div class="logo-grid" aria-label="Sponsor logo placeholders">
-            <div>Logo</div>
-            <div>Logo</div>
-            <div>Logo</div>
-            <div>Logo</div>
+
+          <div class="document-grid">
+            <article class="document-card">
+              <a
+                class="document-preview"
+                href="./photos/2026%20Diberville%20sponsor%20levels%20FINAL%201A.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/2026%20Diberville%20sponsor%20levels%20FINAL%201A.jpg"
+                  alt="First page of 2026 D'Iberville Fishing Rodeo sponsor levels"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="document-card__body">
+                <p class="document-card__eyebrow">Page 1</p>
+                <h3>Title Through Red Snapper</h3>
+                <p>
+                  High-visibility tiers are shown in the first page of the sponsor
+                  package.
+                </p>
+                <div class="link-cluster">
+                  <a
+                    class="button button--ghost"
+                    href="./photos/2026%20Diberville%20sponsor%20levels%20FINAL%201A.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Page 1
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="document-card">
+              <a
+                class="document-preview"
+                href="./photos/2026%20Diberville%20sponsor%20levels%20FINAL%202A.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/2026%20Diberville%20sponsor%20levels%20FINAL%202A.jpg"
+                  alt="Second page of 2026 D'Iberville Fishing Rodeo sponsor levels"
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="document-card__body">
+                <p class="document-card__eyebrow">Page 2</p>
+                <h3>Bull Red Through Flounder</h3>
+                <p>
+                  Remaining levels, prize support, and sponsor mentions continue
+                  on the second page.
+                </p>
+                <div class="link-cluster">
+                  <a
+                    class="button button--ghost"
+                    href="./photos/2026%20Diberville%20sponsor%20levels%20FINAL%202A.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Page 2
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
 
-        <section class="panel panel--warm" id="photos">
+        <section class="panel panel--warm panel--full" id="shirts">
           <div class="panel__header">
             <p class="panel__label">Section 06</p>
-            <h2>Photos</h2>
+            <h2>Rodeo Shirts</h2>
           </div>
+
           <p class="panel__text">
-            This area is ready for event photos, gallery thumbnails, highlights,
-            or a social feed embed later on.
+            Shirt mockups are grouped into a simple gallery so visitors can scan
+            the available looks without leaving the site.
           </p>
-          <div class="photo-grid" aria-label="Photo placeholders">
-            <div class="photo-grid__item photo-grid__item--tall"></div>
-            <div class="photo-grid__item"></div>
-            <div class="photo-grid__item"></div>
+
+          <div class="shirt-grid" aria-label="D'Iberville rodeo shirt gallery">
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20GRANITE_SHIRT%20BCKI.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20GRANITE_SHIRT%20BCKI.jpg"
+                  alt="Granite D'Iberville Fishing Rodeo shirt design"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>Granite shirt design</figcaption>
+            </figure>
+
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20white.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20white.jpg"
+                  alt="White dry-fit rodeo shirt"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>White dry-fit</figcaption>
+            </figure>
+
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20%20sky%20blue.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20%20sky%20blue.jpg"
+                  alt="Sky blue dry-fit rodeo shirt"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>Sky blue dry-fit</figcaption>
+            </figure>
+
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20blk%20.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20blk%20.jpg"
+                  alt="Black dry-fit rodeo shirt"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>Black dry-fit</figcaption>
+            </figure>
+
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20drk%20teaL.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20drk%20teaL.jpg"
+                  alt="Dark teal dry-fit rodeo shirt"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>Dark teal dry-fit</figcaption>
+            </figure>
+
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20pale%20gray.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20pale%20gray.jpg"
+                  alt="Pale gray dry-fit rodeo shirt"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>Pale gray dry-fit</figcaption>
+            </figure>
+
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20sea%20grass.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20sea%20grass.jpg"
+                  alt="Sea grass dry-fit rodeo shirt"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>Sea grass dry-fit</figcaption>
+            </figure>
+
+            <figure class="shirt-card">
+              <a
+                href="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20spring%20yellow.jpg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="./photos/dibervilleshirts/DIBERVILLE%20RODEO%20DRYFIT%20SHIRTS%20spring%20yellow.jpg"
+                  alt="Spring yellow dry-fit rodeo shirt"
+                  loading="lazy"
+                />
+              </a>
+              <figcaption>Spring yellow dry-fit</figcaption>
+            </figure>
           </div>
         </section>
       </main>
 
       <footer class="footer">
-        <p>D'Iberville Fishing Rodeo site structure draft</p>
-        <p>Ready for your logos, dates, forms, sponsor list, and final copy.</p>
+        <div class="footer__brand">
+          <img
+            class="footer__logo"
+            src="./logo/Diberville%20FISHING%20RODEO%20LOGO%20%20FINAL%20FINAL%20A%20png.png"
+            alt="D'Iberville Fishing Rodeo logo"
+            loading="lazy"
+          />
+          <div>
+            <p class="footer__title">D'Iberville Fishing Rodeo 2026</p>
+            <p>May 22-24, 2026 at the D'Iberville Marina</p>
+          </div>
+        </div>
+
+        <p>
+          Official forms, sponsor materials, memorial artwork, and shirt previews
+          are now built directly into the site structure.
+        </p>
       </footer>
     </div>
+
+    <script>
+      const registrationRecipient = "marty@martywilson.com";
+      const registrationForm = document.getElementById("registration-form");
+      const registrationStatus = document.getElementById("registration-status");
+
+      if (registrationForm && registrationStatus) {
+        registrationForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          if (!registrationForm.reportValidity()) {
+            registrationStatus.textContent =
+              "Please complete the required fields and confirm you agree to the rules.";
+            return;
+          }
+
+          const formData = new FormData(registrationForm);
+          const lines = [
+            "New D'Iberville Fishing Rodeo registration",
+            "",
+            `Full name: ${formData.get("fullName") || ""}`,
+            `Age: ${formData.get("age") || ""}`,
+            `Email: ${formData.get("email") || ""}`,
+            `Phone: ${formData.get("phone") || ""}`,
+            `Veteran status: ${formData.get("veteranStatus") || ""}`,
+            `City and state: ${formData.get("location") || ""}`,
+            `Agreed to rules: ${formData.get("agreeToRules") ? "Yes" : "No"}`,
+            "",
+            "Notes:",
+            `${formData.get("notes") || "None"}`
+          ];
+
+          const subject = encodeURIComponent(
+            "D'Iberville Fishing Rodeo Registration"
+          );
+          const body = encodeURIComponent(lines.join("\n"));
+          const mailtoUrl = `mailto:${registrationRecipient}?subject=${subject}&body=${body}`;
+
+          registrationStatus.textContent =
+            "Opening your email app now. Send the prepared message to finish the registration.";
+          window.location.href = mailtoUrl;
+        });
+      }
+    </script>
   </body>
 </html>
