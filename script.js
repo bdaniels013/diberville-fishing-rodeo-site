@@ -4,10 +4,11 @@ const formatFieldName = (name) =>
     .replace(/[-_]+/g, " ")
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 
-document.querySelectorAll("[data-mailto-form]").forEach((form) => {
+document.querySelectorAll("[data-email-form]").forEach((form) => {
   const status = form.querySelector("[data-form-status]");
+  const submitButton = form.querySelector('button[type="submit"]');
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!form.reportValidity()) {
@@ -18,7 +19,7 @@ document.querySelectorAll("[data-mailto-form]").forEach((form) => {
       return;
     }
 
-    const lines = [form.dataset.formName || "Website form submission", ""];
+    const fields = [];
 
     Array.from(form.elements).forEach((field) => {
       if (!field.name || field.disabled || field.type === "submit") {
@@ -36,21 +37,60 @@ document.querySelectorAll("[data-mailto-form]").forEach((form) => {
         value = field.checked ? field.value || "Yes" : "No";
       }
 
-      lines.push(`${label}: ${value || "N/A"}`);
+      fields.push({
+        label,
+        name: field.name,
+        value: value || "N/A",
+      });
     });
 
-    const recipient = form.dataset.mailtoTo || "marty@martywilson.com";
-    const subject = encodeURIComponent(
-      form.dataset.mailtoSubject || "D'Iberville Fishing Rodeo Form Submission"
-    );
-    const body = encodeURIComponent(lines.join("\n"));
-
     if (status) {
-      status.textContent =
-        "Your email app is opening with a completed message. Send it to finish your submission.";
+      status.textContent = "Sending your submission...";
     }
 
-    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    if (submitButton) {
+      submitButton.disabled = true;
+      form.setAttribute("aria-busy", "true");
+    }
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formName: form.dataset.formName || "Website form submission",
+          subject:
+            form.dataset.emailSubject ||
+            "D'Iberville Fishing Rodeo Form Submission",
+          fields,
+          pageUrl: window.location.href,
+        }),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.error || "Unable to send submission.");
+      }
+
+      form.reset();
+
+      if (status) {
+        status.textContent =
+          "Thank you. Your submission was sent to the tournament team.";
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent =
+          "Something went wrong while sending. Please try again in a moment.";
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        form.removeAttribute("aria-busy");
+      }
+    }
   });
 });
 

@@ -403,6 +403,12 @@ a {
   transform: translateY(-2px);
 }
 
+.button:disabled {
+  cursor: wait;
+  opacity: 0.66;
+  transform: none;
+}
+
 .button--primary {
   background: linear-gradient(135deg, var(--gold-bright), var(--gold));
   color: #102332;
