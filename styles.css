@@ -512,6 +512,47 @@ a {
   font-weight: 800;
 }
 
+.prize-table {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.prize-table div {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem;
+  border: 1px solid rgba(139, 226, 232, 0.32);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.prize-table span {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.prize-table strong {
+  font-family: Baskerville, Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1;
+  color: var(--gold-bright);
+}
+
+.site-modal__note {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
 .panel--warm .panel__label,
 .panel--sand .panel__label {
   color: #8d6330;
@@ -834,6 +875,47 @@ a {
   backdrop-filter: blur(10px);
 }
 
+.document-card--top-note {
+  gap: 0.8rem;
+}
+
+.document-card--top-note .document-preview,
+.document-card--top-note .document-card__body {
+  grid-area: auto;
+}
+
+.document-card--top-note .document-card__body {
+  align-self: auto;
+  justify-self: stretch;
+  width: auto;
+  margin: 0;
+  padding: 0.9rem 1rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.document-card--top-note .document-card__eyebrow {
+  grid-column: 1 / -1;
+}
+
+.document-card--top-note h3 {
+  grid-column: 1;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+}
+
+.document-card--top-note p:not(.document-card__eyebrow) {
+  grid-column: 1;
+  max-width: 66ch;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.document-card--top-note .link-cluster {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  justify-content: flex-end;
+}
+
 .document-card__body--spotlight {
   align-content: center;
 }
@@ -1088,6 +1170,14 @@ a {
   background: rgba(255, 255, 255, 0.09);
   color: var(--ink-light);
   font-weight: 800;
+  text-decoration: none;
+}
+
+.sponsor-ticker__item--button {
+  border-color: rgba(245, 209, 139, 0.44);
+  background: linear-gradient(135deg, rgba(245, 209, 139, 0.96), rgba(216, 167, 84, 0.94));
+  color: #102332;
+  box-shadow: 0 10px 24px rgba(1, 18, 28, 0.18);
 }
 
 .sponsor-ticker__item img {
@@ -1188,6 +1278,22 @@ a {
   .document-card--wide .document-card__body {
     width: calc(100% - 1.2rem);
     margin: 0.6rem;
+  }
+
+  .document-card--top-note .document-card__body {
+    width: auto;
+    margin: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .document-card--top-note .link-cluster {
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: flex-start;
+  }
+
+  .prize-table {
+    grid-template-columns: 1fr;
   }
 
   .hero__actions,

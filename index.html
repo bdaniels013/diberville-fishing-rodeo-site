@@ -132,7 +132,16 @@
             <h2>Rooted in Tradition</h2>
           </div>
 
-          <article class="document-card document-card--wide">
+          <article class="document-card document-card--wide document-card--top-note">
+            <div class="document-card__body">
+              <p class="document-card__eyebrow">Mayor's quote</p>
+              <h3>For Generations on the Water</h3>
+              <p>
+                A message honoring D'Iberville's families, fishermen, shrimpers,
+                boat builders, and working waterfront traditions.
+              </p>
+            </div>
+
             <a
               class="document-preview document-preview--letter"
               href="./photos/MAYOR%20QUOTE%20POST%20RODEO%20GENERATIONS%20BOAT%20BUILDERS%20RUSTY%20QUAVE%20(1).jpg"
@@ -145,32 +154,9 @@
                 loading="lazy"
               />
             </a>
-
-            <div class="document-card__body">
-              <p class="document-card__eyebrow">Mayor's quote</p>
-              <h3>For Generations on the Water</h3>
-              <p>
-                The D'Iberville Fishing Rodeo celebrates the families, fishermen,
-                shrimpers, boat builders, and working waterfront traditions that
-                helped shape the city.
-              </p>
-            </div>
           </article>
 
-          <article class="document-card document-card--wide">
-            <a
-              class="document-preview document-preview--letter"
-              href="./photos/Welcome%20Letter%20Signed%20by%20Mayor.png"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="./photos/Welcome%20Letter%20Signed%20by%20Mayor.png"
-                alt="Welcome letter signed by Mayor Rusty Quave"
-                loading="lazy"
-              />
-            </a>
-
+          <article class="document-card document-card--wide document-card--top-note">
             <div class="document-card__body">
               <p class="document-card__eyebrow">Welcome letter</p>
               <h3>Mayor's Welcome</h3>
@@ -189,6 +175,19 @@
                 </a>
               </div>
             </div>
+
+            <a
+              class="document-preview document-preview--letter"
+              href="./photos/Welcome%20Letter%20Signed%20by%20Mayor.png"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="./photos/Welcome%20Letter%20Signed%20by%20Mayor.png"
+                alt="Welcome letter signed by Mayor Rusty Quave"
+                loading="lazy"
+              />
+            </a>
           </article>
         </section>
 
@@ -503,7 +502,9 @@
           <span class="sponsor-ticker__item">Coastal Conservation Association Mississippi</span>
           <span class="sponsor-ticker__item">D'Iberville St. Martin Chamber of Commerce</span>
           <span class="sponsor-ticker__item">One Gulf One Goal</span>
-          <span class="sponsor-ticker__item">Become a 2026 Sponsor</span>
+          <a class="sponsor-ticker__item sponsor-ticker__item--button" href="/sponsors">
+            Become a 2026 Sponsor
+          </a>
         </div>
         <div class="sponsor-ticker__group" aria-hidden="true">
           <span class="sponsor-ticker__label">Sponsor Spotlight</span>
@@ -511,7 +512,13 @@
           <span class="sponsor-ticker__item">Coastal Conservation Association Mississippi</span>
           <span class="sponsor-ticker__item">D'Iberville St. Martin Chamber of Commerce</span>
           <span class="sponsor-ticker__item">One Gulf One Goal</span>
-          <span class="sponsor-ticker__item">Become a 2026 Sponsor</span>
+          <a
+            class="sponsor-ticker__item sponsor-ticker__item--button"
+            href="/sponsors"
+            tabindex="-1"
+          >
+            Become a 2026 Sponsor
+          </a>
         </div>
       </div>
     </aside>
@@ -537,21 +544,39 @@
         <p class="site-modal__eyebrow">Fishing Rodeo 2026</p>
         <h2 id="prizes-modal-title">Prizes</h2>
         <p>
-          Cash payouts and prizes will be awarded for the D'Iberville Fishing
-          Rodeo.
+          Each inshore tournament category includes first, second, and third
+          place cash prizes.
         </p>
-        <ul class="modal-list">
-          <li><strong>1st place:</strong> $750 cash payout</li>
-          <li>Additional prize details will be announced as they are finalized.</li>
-        </ul>
-        <a
-          class="button button--primary"
-          href="./photos/DFR%20FLYER%20POSTER.png"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open Event Poster
-        </a>
+        <div class="prize-table" aria-label="Prize payouts for each category">
+          <div>
+            <span>1st place</span>
+            <strong>$740</strong>
+          </div>
+          <div>
+            <span>2nd place</span>
+            <strong>$500</strong>
+          </div>
+          <div>
+            <span>3rd place</span>
+            <strong>$250</strong>
+          </div>
+        </div>
+        <p class="site-modal__note">
+          These payouts apply to each listed category.
+        </p>
+        <div class="modal-actions">
+          <button class="button button--primary" type="button" data-modal-open="categories-modal">
+            View Categories
+          </button>
+          <a
+            class="button button--ghost"
+            href="./photos/DFR%20FLYER%20POSTER.png"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Event Poster
+          </a>
+        </div>
       </div>
     </div>
 
@@ -586,14 +611,19 @@
           <li>Black Drum</li>
           <li>Sheepshead</li>
         </ul>
-        <a
-          class="button button--primary"
-          href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20RULES%202K26%20final%201A.jpg"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open Full Rules
-        </a>
+        <div class="modal-actions">
+          <button class="button button--primary" type="button" data-modal-open="prizes-modal">
+            View Prizes
+          </button>
+          <a
+            class="button button--ghost"
+            href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20RULES%202K26%20final%201A.jpg"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Full Rules
+          </a>
+        </div>
       </div>
     </div>
 

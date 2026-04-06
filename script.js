@@ -63,6 +63,12 @@ const closeModal = (modal) => {
 };
 
 const openModal = (modal) => {
+  modals.forEach((activeModal) => {
+    if (activeModal !== modal) {
+      activeModal.hidden = true;
+    }
+  });
+
   modal.hidden = false;
   document.body.classList.add("modal-open");
   modal.querySelector("[data-modal-close]")?.focus();
