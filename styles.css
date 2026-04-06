@@ -916,6 +916,10 @@ a {
   line-height: 1.45;
 }
 
+.document-card--top-note .detail-list {
+  grid-column: 1;
+}
+
 .document-card--top-note .link-cluster {
   grid-column: 2;
   grid-row: 2 / span 2;
