@@ -53,3 +53,47 @@ document.querySelectorAll("[data-mailto-form]").forEach((form) => {
     window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
   });
 });
+
+const modalTriggers = document.querySelectorAll("[data-modal-open]");
+const modals = document.querySelectorAll("[data-modal]");
+
+const closeModal = (modal) => {
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+};
+
+const openModal = (modal) => {
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  modal.querySelector("[data-modal-close]")?.focus();
+};
+
+modalTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const modal = document.getElementById(trigger.dataset.modalOpen);
+
+    if (modal) {
+      openModal(modal);
+    }
+  });
+});
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal || event.target.closest("[data-modal-close]")) {
+      closeModal(modal);
+    }
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") {
+    return;
+  }
+
+  modals.forEach((modal) => {
+    if (!modal.hidden) {
+      closeModal(modal);
+    }
+  });
+});

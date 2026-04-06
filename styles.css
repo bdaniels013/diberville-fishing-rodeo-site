@@ -32,6 +32,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  padding-bottom: calc(82px + env(safe-area-inset-bottom));
   color: var(--ink-light);
   background:
     radial-gradient(circle at top, rgba(139, 226, 232, 0.34), transparent 24%),
@@ -39,6 +40,10 @@ body {
     radial-gradient(circle at 80% 0%, rgba(245, 209, 139, 0.16), transparent 22%),
     linear-gradient(180deg, #08445b 0%, #0b7890 45%, #063044 100%);
   font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 body::before,
@@ -380,6 +385,8 @@ a {
   padding: 0.82rem 1.35rem;
   border-radius: 999px;
   border: 1px solid transparent;
+  cursor: pointer;
+  font: inherit;
   font-weight: 700;
   text-decoration: none;
   transition:
@@ -407,6 +414,102 @@ a {
   background: rgba(255, 255, 255, 0.08);
   color: var(--ink-light);
   backdrop-filter: blur(10px);
+}
+
+.site-modal[hidden] {
+  display: none;
+}
+
+.site-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(139, 226, 232, 0.24), transparent 24%),
+    rgba(3, 28, 40, 0.74);
+  backdrop-filter: blur(12px);
+}
+
+.site-modal__card {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  width: min(620px, 100%);
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+  border: 1px solid rgba(139, 226, 232, 0.32);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(245, 209, 139, 0.22), transparent 28%),
+    linear-gradient(180deg, rgba(6, 68, 91, 0.98), rgba(8, 101, 122, 0.98));
+  box-shadow: 0 30px 90px rgba(1, 18, 28, 0.54);
+  color: var(--ink-light);
+}
+
+.site-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(139, 226, 232, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ink-light);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.site-modal__eyebrow {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-modal h2 {
+  margin: 0;
+  padding-right: 3rem;
+  font-family: Baskerville, Georgia, serif;
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  line-height: 0.96;
+}
+
+.site-modal p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.modal-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--ink-light);
+  line-height: 1.5;
+}
+
+.modal-list--chips {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+}
+
+.modal-list--chips li {
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(139, 226, 232, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 800;
 }
 
 .panel--warm .panel__label,
@@ -647,8 +750,10 @@ a {
 }
 
 .document-card--wide {
-  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
-  align-items: center;
+  position: relative;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  isolation: isolate;
 }
 
 .document-card--spotlight {
@@ -692,7 +797,7 @@ a {
 }
 
 .document-preview--letter img {
-  max-height: 760px;
+  max-height: 980px;
 }
 
 .document-preview--memorial img {
@@ -712,6 +817,21 @@ a {
   border: 1px solid rgba(23, 48, 65, 0.1);
   background: linear-gradient(180deg, rgba(248, 240, 222, 0.98), rgba(235, 221, 190, 0.98));
   color: var(--ink-dark);
+}
+
+.document-card--wide .document-preview {
+  grid-area: 1 / 1;
+}
+
+.document-card--wide .document-card__body {
+  grid-area: 1 / 1;
+  z-index: 3;
+  align-self: end;
+  justify-self: end;
+  width: min(440px, 44%);
+  margin: 1.1rem;
+  background: linear-gradient(180deg, rgba(248, 240, 222, 0.96), rgba(235, 221, 190, 0.96));
+  backdrop-filter: blur(10px);
 }
 
 .document-card__body--spotlight {
@@ -846,6 +966,7 @@ a {
 
 .shirt-grid--single {
   grid-template-columns: minmax(260px, 520px);
+  justify-content: center;
 }
 
 .shirt-card {
@@ -909,6 +1030,73 @@ a {
   line-height: 1.65;
 }
 
+.sponsor-ticker {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  overflow: hidden;
+  padding: 0.72rem 0;
+  border-top: 1px solid rgba(139, 226, 232, 0.34);
+  background:
+    linear-gradient(90deg, rgba(6, 48, 68, 0.98), rgba(9, 112, 135, 0.96), rgba(6, 48, 68, 0.98));
+  box-shadow: 0 -18px 44px rgba(1, 18, 28, 0.32);
+  backdrop-filter: blur(14px);
+}
+
+.sponsor-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: sponsor-scroll 34s linear infinite;
+}
+
+.sponsor-ticker:hover .sponsor-ticker__track {
+  animation-play-state: paused;
+}
+
+.sponsor-ticker__group {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-right: 0.9rem;
+}
+
+.sponsor-ticker__label,
+.sponsor-ticker__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 42px;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+
+.sponsor-ticker__label {
+  padding: 0.6rem 1rem;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  color: #102332;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sponsor-ticker__item {
+  padding: 0.62rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--ink-light);
+  font-weight: 800;
+}
+
+.sponsor-ticker__item img {
+  width: auto;
+  max-width: 150px;
+  height: 28px;
+  object-fit: contain;
+}
+
 @keyframes lift-in {
   from {
     opacity: 0;
@@ -918,6 +1106,22 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes sponsor-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-ticker__track {
+    animation: none;
   }
 }
 
@@ -939,6 +1143,10 @@ a {
 
   .hero__art {
     min-height: 360px;
+  }
+
+  .document-card--wide .document-card__body {
+    width: min(520px, calc(100% - 2rem));
   }
 }
 
@@ -975,6 +1183,11 @@ a {
     width: auto;
     max-width: calc(100% - 1.2rem);
     text-align: center;
+  }
+
+  .document-card--wide .document-card__body {
+    width: calc(100% - 1.2rem);
+    margin: 0.6rem;
   }
 
   .hero__actions,

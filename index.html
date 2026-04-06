@@ -13,7 +13,7 @@
   <body>
     <div class="site-shell">
       <nav class="site-nav" aria-label="Primary navigation">
-        <a class="site-nav__brand" href="./index.html">
+        <a class="site-nav__brand" href="/">
           <img
             class="site-nav__logo"
             src="./logo/Diberville%20FISHING%20RODEO%20LOGO%20%20FINAL%20FINAL%20A%20png.png"
@@ -22,10 +22,10 @@
           <span>D'Iberville Fishing Rodeo</span>
         </a>
         <div class="site-nav__links">
-          <a href="./index.html#schedule">Schedule</a>
-          <a href="./index.html#registration">Register</a>
-          <a href="./sponsors.html">Sponsors</a>
-          <a href="./vendors.html">Vendors</a>
+          <a href="/#schedule">Schedule</a>
+          <a href="/#registration">Register</a>
+          <a href="/sponsors">Sponsors</a>
+          <a href="/vendors">Vendors</a>
         </div>
       </nav>
 
@@ -75,10 +75,16 @@
                 <a href="#registration" class="button button--primary">
                   Register
                 </a>
-                <a href="./sponsors.html" class="button button--ghost">
+                <button class="button button--ghost" type="button" data-modal-open="prizes-modal">
+                  Prizes
+                </button>
+                <button class="button button--ghost" type="button" data-modal-open="categories-modal">
+                  Categories
+                </button>
+                <a href="/sponsors" class="button button--ghost">
                   Sponsors
                 </a>
-                <a href="./vendors.html" class="button button--ghost">
+                <a href="/vendors" class="button button--ghost">
                   Vendors
                 </a>
               </div>
@@ -424,13 +430,13 @@
           </p>
 
           <div class="cta-grid">
-            <a class="cta-card" href="./sponsors.html">
+            <a class="cta-card" href="/sponsors">
               <span>Sponsors</span>
               <strong>Sponsorship Packages</strong>
               <em>View sponsor levels, the sponsor form, and the community partner letter.</em>
             </a>
 
-            <a class="cta-card" href="./vendors.html">
+            <a class="cta-card" href="/vendors">
               <span>Vendors</span>
               <strong>Vendor Application</strong>
               <em>Review the vendor application and submit vendor details by email.</em>
@@ -445,8 +451,8 @@
           </div>
 
           <p class="panel__text">
-            Browse this year's available shirt design for the D'Iberville Fishing
-            Rodeo.
+            Shirts will be available for sale on site at the D'Iberville
+            Fishing Rodeo during the event.
           </p>
 
           <div class="shirt-grid shirt-grid--single" aria-label="D'Iberville rodeo shirt gallery">
@@ -462,7 +468,6 @@
                   loading="lazy"
                 />
               </a>
-              <figcaption>Granite shirt design</figcaption>
             </figure>
           </div>
         </section>
@@ -487,6 +492,109 @@
           applications, and merchandise for the 2026 D'Iberville Fishing Rodeo.
         </p>
       </footer>
+    </div>
+
+    <!-- Sponsor ticker: add future sponsor logos or names inside both ticker groups. -->
+    <aside class="sponsor-ticker" aria-label="Rodeo sponsors and partners">
+      <div class="sponsor-ticker__track">
+        <div class="sponsor-ticker__group">
+          <span class="sponsor-ticker__label">Sponsor Spotlight</span>
+          <span class="sponsor-ticker__item">City of D'Iberville</span>
+          <span class="sponsor-ticker__item">Coastal Conservation Association Mississippi</span>
+          <span class="sponsor-ticker__item">D'Iberville St. Martin Chamber of Commerce</span>
+          <span class="sponsor-ticker__item">One Gulf One Goal</span>
+          <span class="sponsor-ticker__item">Become a 2026 Sponsor</span>
+        </div>
+        <div class="sponsor-ticker__group" aria-hidden="true">
+          <span class="sponsor-ticker__label">Sponsor Spotlight</span>
+          <span class="sponsor-ticker__item">City of D'Iberville</span>
+          <span class="sponsor-ticker__item">Coastal Conservation Association Mississippi</span>
+          <span class="sponsor-ticker__item">D'Iberville St. Martin Chamber of Commerce</span>
+          <span class="sponsor-ticker__item">One Gulf One Goal</span>
+          <span class="sponsor-ticker__item">Become a 2026 Sponsor</span>
+        </div>
+      </div>
+    </aside>
+
+    <div
+      class="site-modal"
+      id="prizes-modal"
+      data-modal
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="prizes-modal-title"
+    >
+      <div class="site-modal__card">
+        <button
+          class="site-modal__close"
+          type="button"
+          data-modal-close
+          aria-label="Close prizes popup"
+        >
+          X
+        </button>
+        <p class="site-modal__eyebrow">Fishing Rodeo 2026</p>
+        <h2 id="prizes-modal-title">Prizes</h2>
+        <p>
+          Cash payouts and prizes will be awarded for the D'Iberville Fishing
+          Rodeo.
+        </p>
+        <ul class="modal-list">
+          <li><strong>1st place:</strong> $750 cash payout</li>
+          <li>Additional prize details will be announced as they are finalized.</li>
+        </ul>
+        <a
+          class="button button--primary"
+          href="./photos/DFR%20FLYER%20POSTER.png"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open Event Poster
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="site-modal"
+      id="categories-modal"
+      data-modal
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="categories-modal-title"
+    >
+      <div class="site-modal__card">
+        <button
+          class="site-modal__close"
+          type="button"
+          data-modal-close
+          aria-label="Close categories popup"
+        >
+          X
+        </button>
+        <p class="site-modal__eyebrow">Fishing Rodeo 2026</p>
+        <h2 id="categories-modal-title">Categories</h2>
+        <p>
+          Inshore tournament categories listed for the 2026 D'Iberville Fishing
+          Rodeo.
+        </p>
+        <ul class="modal-list modal-list--chips">
+          <li>Speckled Trout</li>
+          <li>Redfish</li>
+          <li>Flounder</li>
+          <li>Black Drum</li>
+          <li>Sheepshead</li>
+        </ul>
+        <a
+          class="button button--primary"
+          href="./photos/DFR%20(DIBERVILLE%20FISHING%20RODEO)%20RULES%202K26%20final%201A.jpg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open Full Rules
+        </a>
+      </div>
     </div>
 
     <script src="./script.js"></script>
