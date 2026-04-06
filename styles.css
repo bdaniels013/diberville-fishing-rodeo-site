@@ -518,6 +518,28 @@ a {
   font-weight: 800;
 }
 
+.category-groups {
+  display: grid;
+  gap: 1rem;
+}
+
+.category-groups section {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid rgba(139, 226, 232, 0.28);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.category-groups h3 {
+  margin: 0;
+  color: var(--gold-bright);
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .prize-table {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
