@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendors | D'Iberville Fishing Rodeo</title>
+    <meta
+      name="description"
+      content="Vendor application and vendor submission form for the 2026 D'Iberville Fishing Rodeo."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="site-nav__brand" href="./index.html">
+          <img
+            class="site-nav__logo"
+            src="./logo/Diberville%20FISHING%20RODEO%20LOGO%20%20FINAL%20FINAL%20A%20png.png"
+            alt="D'Iberville Fishing Rodeo logo"
+          />
+          <span>D'Iberville Fishing Rodeo</span>
+        </a>
+        <div class="site-nav__links">
+          <a href="./index.html#schedule">Schedule</a>
+          <a href="./index.html#registration">Register</a>
+          <a href="./sponsors.html">Sponsors</a>
+          <a href="./vendors.html" aria-current="page">Vendors</a>
+        </div>
+      </nav>
+
+      <header class="page-hero">
+        <p class="eyebrow">Vendor Information</p>
+        <h1>Vendor Application</h1>
+        <p>
+          Apply to participate as a vendor during Memorial Weekend at the
+          D'Iberville Fishing Rodeo. Review the application, complete the form,
+          and send it to the tournament team by email.
+        </p>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel panel--cool panel--full">
+          <div class="panel__header">
+            <p class="panel__label">Vendor Packet</p>
+            <h2>Application Flyer</h2>
+          </div>
+
+          <article class="document-card document-card--wide">
+            <a
+              class="document-preview document-preview--letter"
+              href="./photos/DFR%20Vendor%20Application.png"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="./photos/DFR%20Vendor%20Application.png"
+                alt="D'Iberville Fishing Rodeo vendor application"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="document-card__body">
+              <p class="document-card__eyebrow">Vendor application</p>
+              <h3>Booth Options</h3>
+              <ul class="detail-list">
+                <li>10' x 10' booth fee: $50.</li>
+                <li>10' x 10' food booth fee: $100.</li>
+                <li>Vendors must provide their own power.</li>
+              </ul>
+              <div class="link-cluster">
+                <a
+                  class="button button--primary"
+                  href="./photos/DFR%20Vendor%20Application.png"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Vendor Application
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel panel--warm panel--full" id="vendor-form">
+          <div class="panel__header">
+            <p class="panel__label">Submit Application</p>
+            <h2>Vendor Form</h2>
+          </div>
+
+          <p class="panel__text">
+            Complete the form below and click send to email your vendor
+            application details to the tournament team.
+          </p>
+
+          <form
+            class="registration-form vendor-form"
+            data-mailto-form
+            data-mailto-to="marty@martywilson.com"
+            data-mailto-subject="D'Iberville Fishing Rodeo Vendor Application"
+            data-form-name="New D'Iberville Fishing Rodeo Vendor Application"
+          >
+            <div class="registration-form__intro">
+              <p class="document-card__eyebrow">Vendor details</p>
+              <h3>Apply as a Vendor</h3>
+              <p>
+                Share your booth information, product list, contact details, and
+                organization type.
+              </p>
+            </div>
+
+            <div class="registration-form__grid">
+              <label>
+                Company name
+                <input type="text" name="companyName" required />
+              </label>
+
+              <label>
+                Contact person
+                <input type="text" name="contactPerson" autocomplete="name" required />
+              </label>
+
+              <label>
+                Email address
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+
+              <label>
+                Phone number
+                <input type="tel" name="phone" autocomplete="tel" required />
+              </label>
+
+              <label>
+                Address
+                <input type="text" name="address" autocomplete="street-address" required />
+              </label>
+
+              <label>
+                Booth type
+                <select name="boothType" required>
+                  <option value="">Select one</option>
+                  <option value="10x10 booth - $50">10' x 10' booth - $50</option>
+                  <option value="10x10 food booth - $100">10' x 10' food booth - $100</option>
+                </select>
+              </label>
+
+              <label>
+                Organization type
+                <select name="organizationType" required>
+                  <option value="">Select one</option>
+                  <option value="Corporation">Corporation</option>
+                  <option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option>
+                  <option value="LLC">LLC</option>
+                  <option value="Nonprofit">Nonprofit</option>
+                </select>
+              </label>
+
+              <label>
+                Vendor date or dates
+                <input type="text" name="vendorDates" placeholder="May 22-24, 2026" />
+              </label>
+            </div>
+
+            <label class="registration-form__message">
+              Product list
+              <textarea
+                name="productList"
+                rows="5"
+                placeholder="List products, food, drinks, merchandise, or services to be sold in the booth."
+                required
+              ></textarea>
+            </label>
+
+            <label class="registration-form__message">
+              Additional comments
+              <textarea
+                name="additionalComments"
+                rows="4"
+                placeholder="Share setup needs, questions, or additional details."
+              ></textarea>
+            </label>
+
+            <label class="consent-check">
+              <input type="checkbox" name="providesOwnPower" value="Yes" required />
+              <span>I understand that vendors must provide their own power.</span>
+            </label>
+
+            <label class="consent-check">
+              <input type="checkbox" name="agreesToVendorDisclaimer" value="Yes" required />
+              <span>
+                I agree to the vendor application disclaimer and want to send
+                this vendor application.
+              </span>
+            </label>
+
+            <div class="registration-form__actions">
+              <button type="submit" class="button button--primary">
+                Send Vendor Application
+              </button>
+              <p class="registration-form__note">
+                Submitting opens your email app with a completed vendor
+                application message addressed to the tournament team.
+              </p>
+            </div>
+
+            <p class="registration-form__status" data-form-status aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__brand">
+          <img
+            class="footer__logo"
+            src="./logo/Diberville%20FISHING%20RODEO%20LOGO%20%20FINAL%20FINAL%20A%20png.png"
+            alt="D'Iberville Fishing Rodeo logo"
+            loading="lazy"
+          />
+          <div>
+            <p class="footer__title">D'Iberville Fishing Rodeo 2026</p>
+            <p>May 22-24, 2026 at the D'Iberville Marina</p>
+          </div>
+        </div>
+
+        <p>
+          Vendor participation helps create a full festival-style weekend for
+          anglers, families, and visitors.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

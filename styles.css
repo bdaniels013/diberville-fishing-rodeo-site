@@ -80,6 +80,59 @@ a {
   padding: 1.25rem 0 2.5rem;
 }
 
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--panel-line);
+  border-radius: 999px;
+  background: rgba(7, 22, 36, 0.78);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(16px);
+}
+
+.site-nav__brand,
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.site-nav__brand {
+  font-family: Baskerville, Georgia, serif;
+  font-weight: 700;
+  font-size: 1.08rem;
+  text-decoration: none;
+  color: var(--ink-light);
+}
+
+.site-nav__logo {
+  width: 56px;
+  flex: 0 0 auto;
+}
+
+.site-nav__links {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.site-nav__links a {
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav__links a:hover,
+.site-nav__links a[aria-current="page"] {
+  background: rgba(245, 209, 139, 0.12);
+  color: var(--ink-light);
+}
+
 .hero {
   animation: lift-in 760ms ease-out both;
 }
@@ -173,6 +226,12 @@ a {
   filter:
     drop-shadow(0 26px 36px rgba(0, 0, 0, 0.4))
     drop-shadow(0 0 28px rgba(250, 215, 133, 0.14));
+}
+
+.hero__logo--poster {
+  width: min(100%, 520px);
+  max-height: 760px;
+  object-fit: contain;
 }
 
 .hero__rails {
@@ -365,6 +424,36 @@ a {
   margin-top: 1.35rem;
 }
 
+.page-hero {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.35rem;
+  padding: clamp(1.4rem, 4vw, 3rem);
+  border: 1px solid var(--panel-line);
+  border-radius: 42px;
+  background:
+    radial-gradient(circle at top, rgba(216, 167, 84, 0.16), transparent 24%),
+    linear-gradient(135deg, rgba(6, 23, 36, 0.98), rgba(10, 44, 62, 0.97) 55%, rgba(6, 23, 36, 0.98));
+  box-shadow: var(--shadow-xl);
+}
+
+.page-hero h1 {
+  max-width: 14ch;
+  margin: 0;
+  font-family: Baskerville, Georgia, serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.96;
+  color: var(--ink-light);
+}
+
+.page-hero p:not(.eyebrow) {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
 .panel {
   --panel-heading: var(--ink-light);
   --panel-label: rgba(245, 209, 139, 0.88);
@@ -455,6 +544,75 @@ a {
   margin: 0;
   color: var(--ink-soft);
   line-height: 1.6;
+}
+
+.schedule-grid,
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.schedule-card,
+.cta-card {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.15rem;
+  border-radius: 24px;
+  border: 1px solid rgba(23, 48, 65, 0.1);
+  background: linear-gradient(180deg, rgba(248, 240, 222, 0.98), rgba(235, 221, 190, 0.98));
+  box-shadow: var(--shadow-lg);
+  color: var(--ink-dark);
+}
+
+.schedule-card--feature {
+  background: linear-gradient(135deg, rgba(245, 209, 139, 0.98), rgba(236, 187, 97, 0.98));
+}
+
+.schedule-card p,
+.schedule-card h3,
+.schedule-card span,
+.cta-card span,
+.cta-card strong,
+.cta-card em {
+  margin: 0;
+}
+
+.schedule-card p,
+.cta-card span {
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #855b2a;
+}
+
+.schedule-card h3,
+.cta-card strong {
+  font-family: Baskerville, Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1;
+  color: var(--ink-dark);
+}
+
+.schedule-card span,
+.cta-card em {
+  color: var(--ink-dark-soft);
+  line-height: 1.55;
+  font-style: normal;
+}
+
+.cta-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cta-card {
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cta-card:hover {
+  transform: translateY(-2px);
 }
 
 .document-grid {
@@ -682,6 +840,10 @@ a {
   gap: 1rem;
 }
 
+.shirt-grid--single {
+  grid-template-columns: minmax(260px, 520px);
+}
+
 .shirt-card {
   margin: 0;
   padding: 0.85rem;
@@ -761,11 +923,13 @@ a {
   .document-card--wide,
   .document-card--spotlight,
   .document-grid--three,
+  .schedule-grid,
   .shirt-grid {
     grid-template-columns: 1fr;
   }
 
-  .document-grid {
+  .document-grid,
+  .cta-grid {
     grid-template-columns: 1fr;
   }
 
@@ -780,9 +944,20 @@ a {
     padding-top: 0.75rem;
   }
 
+  .site-nav {
+    align-items: flex-start;
+    border-radius: 24px;
+    flex-direction: column;
+  }
+
+  .site-nav__links {
+    justify-content: flex-start;
+  }
+
   .hero__frame,
   .panel,
-  .footer {
+  .footer,
+  .page-hero {
     padding: 1rem;
     border-radius: 24px;
   }
