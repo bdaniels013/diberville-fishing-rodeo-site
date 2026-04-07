@@ -242,39 +242,6 @@ a {
   object-fit: contain;
 }
 
-.hero__rails {
-  position: absolute;
-  inset: 34% 8% auto;
-  height: 98px;
-  border-top: 5px solid rgba(251, 240, 205, 0.72);
-  border-bottom: 5px solid rgba(251, 240, 205, 0.72);
-  opacity: 0.88;
-}
-
-.hero__rails::before,
-.hero__rails::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      transparent 0 5%,
-      rgba(251, 240, 205, 0.72) 5% 7%,
-      transparent 7% 18%,
-      rgba(251, 240, 205, 0.72) 18% 20%,
-      transparent 20% 30%,
-      rgba(251, 240, 205, 0.72) 30% 32%,
-      transparent 32% 68%,
-      rgba(251, 240, 205, 0.72) 68% 70%,
-      transparent 70% 80%,
-      rgba(251, 240, 205, 0.72) 80% 82%,
-      transparent 82% 93%,
-      rgba(251, 240, 205, 0.72) 93% 95%,
-      transparent 95%
-    );
-}
-
 .hero__watermark {
   position: relative;
   z-index: 3;
