@@ -1090,15 +1090,22 @@ a {
 .sponsor-roster__item {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 68px;
   padding: 1rem 1.1rem;
+  margin: 0;
   border: 1px solid rgba(23, 48, 65, 0.12);
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(247, 240, 225, 0.98), rgba(232, 220, 192, 0.98));
   box-shadow: var(--shadow-lg);
-  color: var(--ink-dark);
-  font-weight: 800;
-  line-height: 1.35;
+}
+
+.sponsor-roster__item img {
+  width: 100%;
+  max-width: 220px;
+  max-height: 88px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer {
