@@ -1081,6 +1081,26 @@ a {
   color: var(--ink-dark);
 }
 
+.sponsor-roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.sponsor-roster__item {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(23, 48, 65, 0.12);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(247, 240, 225, 0.98), rgba(232, 220, 192, 0.98));
+  box-shadow: var(--shadow-lg);
+  color: var(--ink-dark);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
