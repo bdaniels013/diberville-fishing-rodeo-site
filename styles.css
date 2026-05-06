@@ -749,6 +749,38 @@ a {
   font-style: normal;
 }
 
+.schedule-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.schedule-list li {
+  display: grid;
+  gap: 0.18rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(23, 48, 65, 0.12);
+}
+
+.schedule-list strong,
+.schedule-list span {
+  margin: 0;
+}
+
+.schedule-list strong {
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-dark);
+}
+
+.schedule-list span {
+  color: var(--ink-dark-soft);
+  line-height: 1.45;
+}
+
 .cta-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
