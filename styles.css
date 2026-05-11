@@ -1115,15 +1115,58 @@ a {
 
 .sponsor-roster {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--sponsor-card-min, 220px), 1fr));
   gap: 0.9rem;
+  margin-top: 0.95rem;
+}
+
+.sponsor-roster--partners {
+  --sponsor-card-min: 280px;
+  --sponsor-card-height: 150px;
+  --sponsor-logo-width: 340px;
+  --sponsor-logo-height: 125px;
+}
+
+.sponsor-roster--premier {
+  --sponsor-card-min: 260px;
+  --sponsor-card-height: 128px;
+  --sponsor-logo-width: 300px;
+  --sponsor-logo-height: 108px;
+}
+
+.sponsor-roster--featured {
+  --sponsor-card-min: 240px;
+  --sponsor-card-height: 114px;
+  --sponsor-logo-width: 270px;
+  --sponsor-logo-height: 96px;
+}
+
+.sponsor-roster--standard {
+  --sponsor-card-min: 215px;
+  --sponsor-card-height: 96px;
+  --sponsor-logo-width: 230px;
+  --sponsor-logo-height: 82px;
+}
+
+.sponsor-roster--supporting {
+  --sponsor-card-min: 190px;
+  --sponsor-card-height: 82px;
+  --sponsor-logo-width: 200px;
+  --sponsor-logo-height: 68px;
+}
+
+.sponsor-roster--community {
+  --sponsor-card-min: 170px;
+  --sponsor-card-height: 72px;
+  --sponsor-logo-width: 170px;
+  --sponsor-logo-height: 56px;
 }
 
 .sponsor-roster__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 68px;
+  min-height: var(--sponsor-card-height, 68px);
   padding: 1rem 1.1rem;
   margin: 0;
   border: 1px solid rgba(23, 48, 65, 0.12);
@@ -1140,8 +1183,8 @@ a.sponsor-roster__item:hover {
 
 .sponsor-roster__item img {
   width: 100%;
-  max-width: 220px;
-  max-height: 88px;
+  max-width: var(--sponsor-logo-width, 220px);
+  max-height: var(--sponsor-logo-height, 88px);
   object-fit: contain;
   display: block;
 }
