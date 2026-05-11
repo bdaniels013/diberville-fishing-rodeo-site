@@ -1130,6 +1130,12 @@ a {
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(247, 240, 225, 0.98), rgba(232, 220, 192, 0.98));
   box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+a.sponsor-roster__item:hover {
+  transform: translateY(-2px);
 }
 
 .sponsor-roster__item img {
