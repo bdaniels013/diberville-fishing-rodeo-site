@@ -1152,6 +1152,11 @@ a {
   --sponsor-logo-height: 44px;
 }
 
+.sponsor-roster__break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 .sponsor-roster__item {
   display: flex;
   align-items: center;
