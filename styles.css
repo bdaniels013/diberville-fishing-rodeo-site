@@ -1127,6 +1127,16 @@ a {
   --sponsor-logo-height: 175px;
 }
 
+.sponsor-roster__item--wide-partner {
+  --sponsor-logo-width: 520px;
+  --sponsor-logo-height: 205px;
+}
+
+.sponsor-roster__item--tall-partner {
+  --sponsor-logo-width: 500px;
+  --sponsor-logo-height: 210px;
+}
+
 .sponsor-roster__item--premier {
   --sponsor-logo-width: 320px;
   --sponsor-logo-height: 118px;
