@@ -1118,38 +1118,38 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.35rem 1.6rem;
+  gap: 1.45rem 1.85rem;
   margin-top: 1.2rem;
 }
 
-.sponsor-roster--partners {
-  --sponsor-logo-width: 340px;
-  --sponsor-logo-height: 125px;
+.sponsor-roster__item--partner {
+  --sponsor-logo-width: 390px;
+  --sponsor-logo-height: 150px;
 }
 
-.sponsor-roster--premier {
-  --sponsor-logo-width: 300px;
-  --sponsor-logo-height: 108px;
+.sponsor-roster__item--premier {
+  --sponsor-logo-width: 320px;
+  --sponsor-logo-height: 118px;
 }
 
-.sponsor-roster--featured {
+.sponsor-roster__item--featured {
   --sponsor-logo-width: 270px;
   --sponsor-logo-height: 96px;
 }
 
-.sponsor-roster--standard {
-  --sponsor-logo-width: 230px;
-  --sponsor-logo-height: 82px;
+.sponsor-roster__item--standard {
+  --sponsor-logo-width: 220px;
+  --sponsor-logo-height: 78px;
 }
 
-.sponsor-roster--supporting {
-  --sponsor-logo-width: 200px;
-  --sponsor-logo-height: 68px;
+.sponsor-roster__item--supporting {
+  --sponsor-logo-width: 175px;
+  --sponsor-logo-height: 58px;
 }
 
-.sponsor-roster--community {
-  --sponsor-logo-width: 170px;
-  --sponsor-logo-height: 56px;
+.sponsor-roster__item--community {
+  --sponsor-logo-width: 135px;
+  --sponsor-logo-height: 44px;
 }
 
 .sponsor-roster__item {
