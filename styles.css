@@ -1148,9 +1148,8 @@ a {
 }
 
 .sponsor-roster__item--marty {
-  --sponsor-logo-width: 440px;
-  --sponsor-logo-height: 230px;
-  flex-basis: 100%;
+  --sponsor-logo-width: 360px;
+  --sponsor-logo-height: 190px;
 }
 
 .sponsor-roster__item--one-gulf {
