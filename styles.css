@@ -1148,13 +1148,14 @@ a {
 }
 
 .sponsor-roster__item--marty {
-  --sponsor-logo-width: 420px;
-  --sponsor-logo-height: 235px;
+  --sponsor-logo-width: 440px;
+  --sponsor-logo-height: 230px;
+  flex-basis: 100%;
 }
 
 .sponsor-roster__item--one-gulf {
-  --sponsor-logo-width: 280px;
-  --sponsor-logo-height: 250px;
+  --sponsor-logo-width: 220px;
+  --sponsor-logo-height: 170px;
 }
 
 .sponsor-roster__item--premier {
