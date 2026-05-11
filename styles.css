@@ -1118,28 +1118,48 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.45rem 1.85rem;
+  gap: 1.35rem 1.75rem;
   margin-top: 1.2rem;
 }
 
 .sponsor-roster__item--partner {
-  --sponsor-logo-width: 440px;
-  --sponsor-logo-height: 175px;
+  --sponsor-logo-width: 360px;
+  --sponsor-logo-height: 160px;
 }
 
-.sponsor-roster__item--wide-partner {
-  --sponsor-logo-width: 520px;
-  --sponsor-logo-height: 205px;
+.sponsor-roster__item--cca {
+  --sponsor-logo-width: 330px;
+  --sponsor-logo-height: 150px;
 }
 
-.sponsor-roster__item--tall-partner {
-  --sponsor-logo-width: 500px;
-  --sponsor-logo-height: 210px;
+.sponsor-roster__item--chamber {
+  --sponsor-logo-width: 610px;
+  --sponsor-logo-height: 250px;
+}
+
+.sponsor-roster__item--county {
+  --sponsor-logo-width: 300px;
+  --sponsor-logo-height: 155px;
+}
+
+.sponsor-roster__item--seafood {
+  --sponsor-logo-width: 360px;
+  --sponsor-logo-height: 180px;
+}
+
+.sponsor-roster__item--marty {
+  --sponsor-logo-width: 420px;
+  --sponsor-logo-height: 235px;
+}
+
+.sponsor-roster__item--one-gulf {
+  --sponsor-logo-width: 280px;
+  --sponsor-logo-height: 250px;
 }
 
 .sponsor-roster__item--premier {
-  --sponsor-logo-width: 320px;
-  --sponsor-logo-height: 118px;
+  --sponsor-logo-width: 300px;
+  --sponsor-logo-height: 115px;
 }
 
 .sponsor-roster__item--featured {
@@ -1148,13 +1168,28 @@ a {
 }
 
 .sponsor-roster__item--standard {
-  --sponsor-logo-width: 220px;
-  --sponsor-logo-height: 78px;
+  --sponsor-logo-width: 225px;
+  --sponsor-logo-height: 82px;
+}
+
+.sponsor-roster__item--seymour {
+  --sponsor-logo-width: 190px;
+  --sponsor-logo-height: 115px;
+}
+
+.sponsor-roster__item--gollott {
+  --sponsor-logo-width: 250px;
+  --sponsor-logo-height: 94px;
+}
+
+.sponsor-roster__item--saad {
+  --sponsor-logo-width: 255px;
+  --sponsor-logo-height: 98px;
 }
 
 .sponsor-roster__item--supporting {
-  --sponsor-logo-width: 175px;
-  --sponsor-logo-height: 58px;
+  --sponsor-logo-width: 185px;
+  --sponsor-logo-height: 64px;
 }
 
 .sponsor-roster__item--community {
