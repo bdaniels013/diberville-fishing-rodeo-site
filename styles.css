@@ -1133,13 +1133,13 @@ a {
 }
 
 .sponsor-roster__item--chamber {
-  --sponsor-logo-width: 610px;
-  --sponsor-logo-height: 250px;
+  --sponsor-logo-width: 540px;
+  --sponsor-logo-height: 185px;
 }
 
 .sponsor-roster__item--county {
-  --sponsor-logo-width: 300px;
-  --sponsor-logo-height: 155px;
+  --sponsor-logo-width: 260px;
+  --sponsor-logo-height: 170px;
 }
 
 .sponsor-roster__item--seafood {
